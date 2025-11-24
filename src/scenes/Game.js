@@ -12,18 +12,6 @@ export class Game extends Phaser.Scene {
         this.currentScore = 0;
     }
 
-    preload(){
-        this.load.setPath('assets');
-        this.load.image('logo', 'logo.png');
-        this.load.image('back', 'back.png');
-        this.load.image('cat', 'cat.png');
-        this.load.image('elephant', 'elephant.png');
-        this.load.image('frog', 'frog.png');
-        this.load.image('lion', 'lion.png');
-        this.load.image('pig', 'pig.png');
-        this.load.image('rabbit', 'rabbit.png');
-    }
-
     create() {
         // Add background
         this.cameras.main.setBackgroundColor(0x71a45f);
@@ -145,6 +133,7 @@ export class Game extends Phaser.Scene {
                 this.time.delayedCall(500, () => {
                     this.winText.setVisible(true);
                     this.input.on('pointerdown', () => {
+                        console.log("Restart Game");
                         this.scene.start('Game');
                     });
                 });

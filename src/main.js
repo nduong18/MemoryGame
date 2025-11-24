@@ -1,3 +1,4 @@
+import { Preloader } from './scenes/Preloader.js';
 import { Game } from './scenes/Game.js';
 
 const config = {
@@ -10,7 +11,7 @@ const config = {
     backgroundColor: '#000000',
     pixelArt: false,
     scene: [
-        Game
+        Preloader, Game
     ],
     scale: {
         mode: Phaser.Scale.FIT,
